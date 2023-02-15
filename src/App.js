@@ -8,9 +8,15 @@ import { calculateTotalPoints } from './services/PointsService';
 class App extends React.Component {
   constructor() {
     super();
-
+    // Get the purchases from the "API".
     const purchases = getPurchases();
 
+    // set the initial state of the App component.
+    // and calculate the total points while we're at it.
+    // ideally we would calculate the total points in the API service
+    // on the server side for larger data sets, but for the sake of this
+    // exercise we'll do it here since we are only calculating on the last
+    // "3 months" of purchases this should be a relatively quick calculation anyways.
     this.state = {
       purchases,
       totalPoints: calculateTotalPoints(purchases)
