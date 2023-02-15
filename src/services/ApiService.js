@@ -1,4 +1,4 @@
-import purchases from '../data/purchases';
+import purchases from '../data/purchase-data';
 
 export function getPurchases() {
   return purchases;

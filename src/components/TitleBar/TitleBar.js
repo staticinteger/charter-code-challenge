@@ -7,7 +7,7 @@ export default class TitleBar extends React.Component {
     return (
       <div id="titleBar">
         <h1>My Purchases</h1>
-        <Points />
+        <Points points={this.props.points}/>
       </div>
     );
   }
