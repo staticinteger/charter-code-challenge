@@ -1,4 +1,8 @@
 
+// We could just pass in the amount to calculate the points
+// But passing the purchase object allows for additional
+// flexibility in the future. For example, if we wanted to
+// add bonus points during a specific time period as a promo.
 export function calculatePointsOnPurchase(purchase) {
   // Make sure we have a valid purchase object and that it has an amount
   // otherwise return 0 points.

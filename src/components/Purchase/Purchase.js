@@ -3,12 +3,27 @@ import './Purchase.css';
 import { calculatePointsOnPurchase } from '../../services/PointsService';
 
 export default class Purchase extends React.Component {
+  constructor(props) {
+    super(props);
+
+    // This will shorten the dot notation when accessing values :)
+    // This also allows for the component to be more flexible in the future
+    this.state = { ...props.purchase };
+  }
   render() {
-    return (
-      <div className="purchase">
-        <p>{this.props.purchase.name}</p>
-        <p>${this.props.purchase.amount} ({calculatePointsOnPurchase(this.props.purchase)} Points)</p>
-      </div>
-    );
+    if (this.state && this.state.name && this.state.amount) {
+      return (
+        <div className="purchase">
+          <p className="purchaseName">{this.state.name}</p>
+          <p className="purchaseAmount">${this.state.amount} ({calculatePointsOnPurchase(this.state)} Points)</p>
+        </div>
+      );
+    } else {
+      return (
+        <div className="purchase">
+          <p className='purchaseError'>Invalid Purchase Data</p>
+        </div>
+      );
+    }
   }
 }
