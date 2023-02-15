@@ -27,7 +27,9 @@ class App extends React.Component {
     return (
       <div id="App">
         <TitleBar points={this.state.totalPoints}/>
-        <Purchases purchases={this.state.purchases} />
+        {this.state.purchases && this.state.purchases.length > 0 && (
+          <Purchases purchases={this.state.purchases} />
+        )}
       </div>
     );
   }
