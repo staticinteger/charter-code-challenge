@@ -17,9 +17,6 @@ class App extends React.Component {
     };
   }
 
-  // Quick note: we could prevent having to pass points through several components
-  // by using a global state management library like Redux, or using react context
-  // but I wanted to keep this example as simple as possible.
   render() {
     return (
       <div id="App">

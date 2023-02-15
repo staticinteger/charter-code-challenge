@@ -1,5 +1,4 @@
 import React from 'react';
-import Points from '../Points/Points';
 import './TitleBar.css';
 
 export default class TitleBar extends React.Component {
@@ -7,7 +6,7 @@ export default class TitleBar extends React.Component {
     return (
       <div id="titleBar">
         <h1>My Purchases</h1>
-        <Points points={this.props.points}/>
+        <p>Total Points: {this.props.points}</p>
       </div>
     );
   }
