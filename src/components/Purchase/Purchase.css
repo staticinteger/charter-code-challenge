@@ -1,0 +1,12 @@
+.purchase {
+  height: 2rem;
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem;
+  background-color: #FFFFFF;
+  margin-top: 1rem;
+}
