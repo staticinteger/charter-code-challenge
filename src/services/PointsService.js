@@ -12,7 +12,7 @@ export function calculatePointsOnPurchase(purchase) {
   const amount = Math.ceil(purchase.amount);
 
   // Provide 1 point for every dollar spent between $50 and $100.
-  if (amount > 50 && amount <= 100) {
+  if (amount >= 50 && amount <= 100) {
     points += (amount - 50);
   }
 
